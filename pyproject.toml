@@ -1,0 +1,24 @@
+[project]
+name = "sodatools"
+version = "2025.2.13.0"
+description = "my tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/soda92/sodatools"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+packages = ["sodatools"]
+exclude = ["__pycache__", "*.pyc", "*.exe"]
+
+[tool.hatch.build.targets.wheel]
+ignore-vcs = true
+packages = ["sodatools"]
+exclude = ["__pycache__", "*.pyc"]
