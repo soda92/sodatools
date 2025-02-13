@@ -1,6 +1,6 @@
 [project]
 name = "sodatools"
-version = "2025.2.13.0"
+version = "2025.2.13.1"
 description = "my tools"
 readme = "README.md"
 requires-python = ">=3.10"

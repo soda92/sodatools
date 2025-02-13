@@ -1,4 +1,14 @@
 from pathlib import Path
+from contextlib import contextmanager
+import os
+
+
+@contextmanager
+def CD(d: str):
+    old = os.getcwd()
+    os.chdir(d)
+    yield
+    os.chdir(old)
 
 
 def read_path(p: Path) -> str:
@@ -13,4 +23,4 @@ def str_path(p: Path):
     return str(p).replace("\\", "/")
 
 
-__all__ = ["read_path", "write_path", "str_path"]
+__all__ = ["read_path", "write_path", "str_path", "CD"]
